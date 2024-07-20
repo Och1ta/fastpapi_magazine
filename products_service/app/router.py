@@ -2,13 +2,13 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 from typing import List
 
-from src.crud import (
+from app.crud import (
     create_category, get_category, get_categories, update_category,
     delete_category, create_product, get_product, get_products,
     update_product, delete_product
 )
-from src.database import get_db
-from src.schemas import Product, ProductCreate, Category, CategoryCreate
+from app.database import get_db
+from app.schemas import Product, ProductCreate, Category, CategoryCreate
 
 
 router = APIRouter()
